@@ -7,5 +7,6 @@
         <item name="colorAccent">@color/Black</item>
         <item name="colorOnSecondary">@color/White</item>
         <item name="colorContainer">@color/Gris</item>
+        <item name="color">@color/BlancoGris</item>
     </style>
 </resources>

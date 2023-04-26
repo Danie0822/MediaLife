@@ -6,6 +6,7 @@
     <color name="Black">#000000</color>
     <color name="White">#FFFFFF</color>
     <color name="Gris">#E3E3E3</color>
+    <color name="BlancoGris">#DFE0E4</color>
 
 
 </resources>

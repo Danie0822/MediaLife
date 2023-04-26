@@ -1,11 +1,13 @@
 package com.example.medialife
 
+import android.annotation.SuppressLint
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
-import androidx.core.view.indices
+import androidx.appcompat.app.AppCompatActivity
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
 import java.sql.PreparedStatement
 import java.sql.SQLException
 
@@ -22,6 +24,7 @@ class ResgiterActicity : AppCompatActivity() {
 
     var clickedItem: String = ""
     private var connectSql = ConnectSql()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,11 +44,12 @@ class ResgiterActicity : AppCompatActivity() {
             try {
                 if(Contraseña2.text.toString() == Contraseña1.text.toString())
                 {
-                val addEstudiante: PreparedStatement =  connectSql.dbConn()?.prepareStatement("INSERT INTO TbCredeciales values (?,?,?,?)")!!
+                    val Contraseña = md5(Contraseña2.text.toString());
+                val addEstudiante: PreparedStatement =  connectSql.dbConn()?.prepareStatement("exec AgregarCredenciales ?,?,?,?;")!!
                 addEstudiante.setString(1, CajitaNombre.text.toString())
                 addEstudiante.setString(2, Correo.text.toString())
                 addEstudiante.setInt(3, 1)
-                addEstudiante.setString(4, Contraseña2.text.toString())
+                addEstudiante.setString(4, Contraseña)
                 addEstudiante.executeUpdate()
 
                 Toast.makeText(this, "Estudiante ingresado correctamente", Toast.LENGTH_SHORT).show()
@@ -73,5 +77,31 @@ class ResgiterActicity : AppCompatActivity() {
 
         }
 
+
+
     }
 }
+
+fun md5(s: String): String {
+    val MD5 = "MD5"
+    try {
+        // Create MD5 Hash
+        val digest: MessageDigest = MessageDigest
+            .getInstance(MD5)
+        digest.update(s.toByteArray())
+        val messageDigest: ByteArray = digest.digest()
+
+        // Create Hex String
+        val hexString = StringBuilder()
+        for (aMessageDigest in messageDigest) {
+            var h = Integer.toHexString(0xFF and aMessageDigest.toInt())
+            while (h.length < 2) h = "0$h"
+            hexString.append(h)
+        }
+        return hexString.toString()
+    } catch (e: NoSuchAlgorithmException) {
+        e.printStackTrace()
+    }
+    return ""
+}
+

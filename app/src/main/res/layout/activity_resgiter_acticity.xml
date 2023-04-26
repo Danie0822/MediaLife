@@ -2,11 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Registrar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResgiterActicity"
 
-    >
+    tools:context=".ResgiterActicity">
 
     <ImageView
         android:id="@+id/img_1"
@@ -21,9 +21,9 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_back"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"></ImageView>
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_back"></ImageView>
 
 
     <TextView
@@ -33,13 +33,14 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="173dp"
-        android:layout_marginEnd="85dp"
-        android:layout_marginBottom="528dp"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="566dp"
         android:fontFamily="@font/poppinsregular"
         android:text="Servicio de la conmunidad "
         android:textColor="@color/Black"
+
         android:textSize="12sp"></TextView>
 
     <TextView
@@ -50,72 +51,60 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="565dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="610dp"
         android:fontFamily="@font/poppinssemibold"
         android:text="Bienvenido Media Life "
         android:textColor="@color/Black"
         android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/Regis"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="52dp"
-        android:layout_marginEnd="57dp"
-        android:layout_marginBottom="203dp"
-        android:background="@drawable/buttom2_shape"
-        android:text="Registrar"
-        android:textColor="@color/White"
-        android:textSize="14dp" />
-
     <EditText
         android:id="@+id/Confirmar"
-        android:layout_width="wrap_content"
+        android:layout_width="324dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="334dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="352dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="325dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="361dp"
+
         android:ems="10"
         android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/Contraseña"
-        android:layout_width="wrap_content"
+        android:layout_width="326dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="272dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="414dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="422dp"
+
         android:ems="10"
         android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/Nombre"
-        android:layout_width="wrap_content"
+        android:layout_width="324dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="216dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="471dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="486dp"
+
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name" />
@@ -135,19 +124,34 @@
 
     <EditText
         android:id="@+id/Correo"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="386dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="300dp"
+
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Correo" />
+
+    <Button
+        android:id="@+id/Regis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="397dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="289dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="203dp"
+        android:text="Button" />
 
 
 </RelativeLayout>
