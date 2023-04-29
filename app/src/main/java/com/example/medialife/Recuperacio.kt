@@ -6,21 +6,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-lateinit var Boton2: Button
-class MainActivity : AppCompatActivity() {
+lateinit var Rest: Button
+class Recuperacio : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_recuperacio)
         supportActionBar?.hide()
-
-        Boton2 = findViewById(R.id.comienzo);
-        Boton2.setOnClickListener {
-            val intent: Intent = Intent(this, loginMedia::class.java)
+        Enviar = findViewById(R.id.rest);
+        Enviar.setOnClickListener {
+            val intent: Intent = Intent(this, MainActivity::class.java)
             startActivity(intent);
 
 
         }
-
     }
 }
