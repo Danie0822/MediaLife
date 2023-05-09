@@ -10,7 +10,7 @@ import android.widget.Button
 class primerUso : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dashboard_enfermera)
+        setContentView(R.layout.activity_primer_uso)
 
 
     }

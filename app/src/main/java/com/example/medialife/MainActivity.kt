@@ -11,16 +11,16 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_dashboard_enfermera)
         supportActionBar?.hide()
 
-        Boton2 = findViewById(R.id.comienzo);
-        Boton2.setOnClickListener {
-            val intent: Intent = Intent(this, loginMedia::class.java)
-            startActivity(intent);
+     //   Boton2 = findViewById(R.id.comienzo);
+       // Boton2.setOnClickListener {
+         //   val intent: Intent = Intent(this, loginMedia::class.java)
+           // startActivity(intent);
 
 
-        }
+        //}
 
     }
 }
