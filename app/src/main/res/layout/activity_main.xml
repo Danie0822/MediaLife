@@ -85,7 +85,7 @@
      app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
  <Button
-     android:id="@+id/comienzo"
+     android:id="@+id/Bienvenido"
      android:layout_width="320dp"
      android:layout_height="49dp"
      android:background="@drawable/button_radius"

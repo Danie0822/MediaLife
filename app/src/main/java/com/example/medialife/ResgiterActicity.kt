@@ -38,12 +38,10 @@ class ResgiterActicity : AppCompatActivity() {
 
 
             try {
-                if(Contraseña2.text.toString() == Contraseña1.text.toString())
-                {
-                    val Contraseña = md5(Contraseña2.text.toString());
+                val Contraseña = md5(Contraseña2.text.toString());
                 val addEstudiante: PreparedStatement =  connectSql.dbConn()?.prepareStatement("exec AgregarCredenciales ?,?,?,?;")!!
                 addEstudiante.setString(1, CajitaNombre.text.toString())
-                addEstudiante.setString(2, CajitaNombre.text.toString())
+                addEstudiante.setString(2, Contraseña1.text.toString())
                 addEstudiante.setInt(3, 1)
                 addEstudiante.setString(4, Contraseña)
                 addEstudiante.executeUpdate()
@@ -64,10 +62,7 @@ class ResgiterActicity : AppCompatActivity() {
 
 
 
-                }
-                else {
-                    Toast.makeText(this, "Error al ingresar", Toast.LENGTH_SHORT).show()
-                }
+
 
             }catch (ex: SQLException){
                 Toast.makeText(this, "Error al ingresar", Toast.LENGTH_SHORT).show()
