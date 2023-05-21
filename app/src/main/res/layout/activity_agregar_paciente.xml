@@ -152,4 +152,111 @@
         app:layout_constraintVertical_bias="0.972"
         app:srcCompat="@drawable/mas" />
 
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="376dp"
+        android:layout_height="543dp"
+        android:layout_marginTop="268dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cdr" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="290dp"
+        android:layout_height="37dp"
+        android:background="@drawable/edit_roudw"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nombre"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.573" />
+
+    <EditText
+        android:id="@+id/txtEnfermedadC"
+        android:layout_width="290dp"
+        android:layout_height="37dp"
+        android:background="@drawable/edit_roudw"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enfermedad Cronica"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.626" />
+
+    <EditText
+        android:id="@+id/txtPeso"
+        android:layout_width="142dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edit_roudw"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Peso"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69" />
+
+    <EditText
+        android:id="@+id/txtTemp"
+        android:layout_width="142dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edit_roudw"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Temp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.754" />
+
+    <EditText
+        android:id="@+id/txtAltura"
+        android:layout_width="142dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edit_roudw"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Altura"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.691" />
+
+    <EditText
+        android:id="@+id/txtPresion"
+        android:layout_width="142dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edit_roudw"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Presion"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.754" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
