@@ -16,10 +16,7 @@ import java.sql.DriverManager
 import java.sql.SQLException
 
 private var connectSql = ConnectSql()
-private val ip="192.168.1.23:60732"
-private val db="MediaLife"
-private val username="Alessandro"
-private val password="Gemelas2905"
+
 
 lateinit var Boton: Button
 lateinit var Contra: Button
@@ -44,72 +41,38 @@ class loginMedia : AppCompatActivity() {
             startActivity(intent1);
         }
         Boton.setOnClickListener {
-
             try {
-                val Contraseña12 = md5(Password.text.toString());
-                val connection = getConnection()
-                if (isValidUser(connection, Name.text.toString(), Contraseña12)) {
-                    println("Inicio de sesión exitoso.")
-                    startActivity(intent1);
-                } else {
-                    println("Credenciales inválidas.")
+                val statement = connectSql.dbConn()?.createStatement()
+                val resultSet =statement?.executeQuery("SELECT Correo, contraseña from TbCredeciales Where Correo = '${Name.text.toString()}' and contraseña= '${Password.text.toString()}'")
+
+                while (resultSet?.next() == true)
+                {
+                    val a1 = resultSet.getString("Correo")
+                    val a2 = resultSet.getString("contraseña")
+
+                    if (Name.text.toString() == a1 && Password.text.toString() == a2)
+                    {
+                        startActivity(intent1)
+                        Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
+                    }
+                    else
+                    {
+                        Toast.makeText(this, "Credenciales Incorrectas", Toast.LENGTH_SHORT).show()
+                    }
                 }
-
-                connection.close()
-
-
-                //Para ocultar el teclado
-                val inputMethodManager =
-                    getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                inputMethodManager.hideSoftInputFromWindow(BotonRegistar.windowToken, 0)
-
-                CajitaNombre.setText("")
-                Contraseña2.setText("")
-                Contraseña1.setText("")
-
-
-            } catch (ex: SQLException){
-            Toast.makeText(this, "Error al ingresar", Toast.LENGTH_SHORT).show()
-        }
-
-
-    }
-    }
-    fun getConnection(): Connection {
-
-            val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
-            StrictMode.setThreadPolicy(policy)
-            var conn: Connection? =  null
-            val connString: String
-            try {
-                Class.forName("net.sourceforge.jtds.jdbc.Driver").newInstance()
-                connString =
-                    "jdbc:jtds:sqlserver://$ip;databaseName=$db;user=$username;password=$password"
-                conn = DriverManager.getConnection(connString)
-
-
-            } catch (ex: SQLException) {
-
-                Log.e("Error: ", ex.message!!)
-            } catch (ex1: ClassNotFoundException) {
-                Log.e("Error: ", ex1.message!!)
-            } catch (ex2: Exception) {
-                Log.e("Error: ", ex2.message!!)
             }
-           return getConnection()
+            catch (ex: SQLException)
+            {
+                Toast.makeText(this, "Error al mostrar", Toast.LENGTH_SHORT).show()
+            }
+
         }
 
 
-        fun isValidUser(connection: Connection, username: String, password: String): Boolean {
-            val query = "SELECT COUNT(*) FROM TbCredeciales WHERE Correo = ? AND contraseña = ?;"
-            val preparedStatement = connection.prepareStatement(query)
-            preparedStatement.setString(1, username)
-            preparedStatement.setString(2, password)
-
-            val resultSet = preparedStatement.executeQuery()
-            resultSet.next()
-            val count = resultSet.getInt(1)
-
-            return count > 0
-        }
     }
+    }
+
+
+
+
+
