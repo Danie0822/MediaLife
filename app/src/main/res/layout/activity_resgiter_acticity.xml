@@ -112,24 +112,6 @@
         app:layout_constraintVertical_bias="0.64" />
 
     <EditText
-        android:id="@+id/txt_Cargos"
-        android:layout_width="360dp"
-        android:layout_height="50dp"
-        android:background="@drawable/edit_roud"
-        android:drawableRight="@drawable/flecha"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingRight="10dp"
-        android:text="Cargo"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.885" />
-
-    <EditText
         android:id="@+id/Contraseña"
         android:layout_width="360dp"
         android:layout_height="50dp"
@@ -171,9 +153,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.966" />
+        app:layout_constraintVertical_bias="0.932" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

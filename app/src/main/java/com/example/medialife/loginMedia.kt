@@ -36,21 +36,22 @@ class loginMedia : AppCompatActivity() {
 
 
         val intent: Intent = Intent(this, ResgiterActicity::class.java)
-        val intent1: Intent = Intent(this, recuperacion::class.java)
+        val intent1: Intent = Intent(this, Agrega::class.java)
         Contra.setOnClickListener {
             startActivity(intent1);
         }
         Boton.setOnClickListener {
+            val Contraseña11 = md5(Password.text.toString());
             try {
                 val statement = connectSql.dbConn()?.createStatement()
-                val resultSet =statement?.executeQuery("SELECT Correo, contraseña from TbCredeciales Where Correo = '${Name.text.toString()}' and contraseña= '${Password.text.toString()}'")
+                val resultSet =statement?.executeQuery("SELECT Correo, contraseña from TbCredeciales Where Correo = '${Name.text.toString()}' and contraseña= '${Contraseña11}'")
 
                 while (resultSet?.next() == true)
                 {
                     val a1 = resultSet.getString("Correo")
                     val a2 = resultSet.getString("contraseña")
 
-                    if (Name.text.toString() == a1 && Password.text.toString() == a2)
+                    if (Name.text.toString() == a1 && Contraseña11 == a2)
                     {
                         startActivity(intent1)
                         Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()

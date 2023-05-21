@@ -11,13 +11,13 @@ class primerUso : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_primer_uso)
-        Boton2 = findViewById(R.id.Conmienzo);
-          Boton2.setOnClickListener {
-          val intent: Intent = Intent(this, loginMedia::class.java)
-            startActivity(intent);
+       // Boton2 = findViewById(R.id.Conmienzo);
+         // Boton2.setOnClickListener {
+         // val intent: Intent = Intent(this, loginMedia::class.java)
+            //startActivity(intent);
 
 
-        }
+        //}
 
     }
 }

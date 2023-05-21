@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btnDesconectar"
+        android:id="@+id/queso"
         android:layout_width="151dp"
         android:layout_height="54dp"
         android:layout_marginBottom="16dp"
@@ -96,11 +96,12 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="379dp"
-        android:layout_height="678dp"
-        android:layout_marginBottom="168dp"
+        android:layout_width="306dp"
+        android:layout_height="423dp"
+        android:layout_marginBottom="268dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/cdr" />
 
@@ -154,17 +155,17 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="376dp"
-        android:layout_height="543dp"
-        android:layout_marginTop="268dp"
+        android:layout_width="445dp"
+        android:layout_height="487dp"
+        android:layout_marginTop="244dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintHorizontal_bias="0.294"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cdr" />
 
     <EditText
-        android:id="@+id/txtNombre"
+        android:id="@+id/nombre"
         android:layout_width="290dp"
         android:layout_height="37dp"
         android:background="@drawable/edit_roudw"
@@ -180,7 +181,7 @@
         app:layout_constraintVertical_bias="0.573" />
 
     <EditText
-        android:id="@+id/txtEnfermedadC"
+        android:id="@+id/enfermeda"
         android:layout_width="290dp"
         android:layout_height="37dp"
         android:background="@drawable/edit_roudw"
@@ -196,7 +197,7 @@
         app:layout_constraintVertical_bias="0.626" />
 
     <EditText
-        android:id="@+id/txtPeso"
+        android:id="@+id/peso"
         android:layout_width="142dp"
         android:layout_height="44dp"
         android:background="@drawable/edit_roudw"
@@ -212,7 +213,7 @@
         app:layout_constraintVertical_bias="0.69" />
 
     <EditText
-        android:id="@+id/txtTemp"
+        android:id="@+id/temperatura"
         android:layout_width="142dp"
         android:layout_height="44dp"
         android:background="@drawable/edit_roudw"
@@ -228,7 +229,7 @@
         app:layout_constraintVertical_bias="0.754" />
 
     <EditText
-        android:id="@+id/txtAltura"
+        android:id="@+id/altura"
         android:layout_width="142dp"
         android:layout_height="44dp"
         android:background="@drawable/edit_roudw"
@@ -244,7 +245,7 @@
         app:layout_constraintVertical_bias="0.691" />
 
     <EditText
-        android:id="@+id/txtPresion"
+        android:id="@+id/presion"
         android:layout_width="142dp"
         android:layout_height="44dp"
         android:background="@drawable/edit_roudw"
