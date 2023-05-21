@@ -79,7 +79,7 @@ class loginMedia : AppCompatActivity() {
 
             val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
-            var conn: Connection? = null
+            var conn: Connection? =  null
             val connString: String
             try {
                 Class.forName("net.sourceforge.jtds.jdbc.Driver").newInstance()
