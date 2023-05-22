@@ -1,6 +1,8 @@
 package com.example.medialife
 
+import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
@@ -13,7 +15,7 @@ import java.sql.SQLException
 lateinit var CajitaNombre: EditText
 lateinit var Contraseña1: EditText
 lateinit var Contraseña2: EditText
-
+lateinit var inicio: TextView
 
 lateinit var BotonRegistar: Button
 
@@ -24,6 +26,7 @@ class ResgiterActicity : AppCompatActivity() {
     private var connectSql = ConnectSql()
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resgiter_acticity)
@@ -33,7 +36,11 @@ class ResgiterActicity : AppCompatActivity() {
         Contraseña1 = findViewById(R.id.Contraseña)
         BotonRegistar = findViewById(R.id.Enviar)
         Contraseña2 = findViewById(R.id.Confirmar)
-
+        inicio = findViewById(R.id.iniciar);
+        val inicq: Intent = Intent(this, loginMedia::class.java)
+        inicio.setOnClickListener{
+            startActivity(inicq);
+        }
         BotonRegistar.setOnClickListener {
 
 
