@@ -23,7 +23,7 @@ public class RecuDatos extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard_enfermera);
+        setContentView(R.layout.activity_nose);
 
         recyclerView = findViewById(R.id.ListaContactos);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

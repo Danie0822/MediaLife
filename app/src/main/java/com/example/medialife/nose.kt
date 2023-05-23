@@ -7,5 +7,6 @@ class nose : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nose)
+        supportActionBar?.hide()
     }
 }
