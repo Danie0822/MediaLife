@@ -8,7 +8,7 @@ import java.sql.SQLException
 
 class ConnectSql {
     //Variables para la cadena de conexión
-    private val ip="10.20.0.120:60732"
+    private val ip="10.26.127.53:60732"
     private val db="MediaLife"
     private val username="Alessandro"
     private val password="Gemelas2905"

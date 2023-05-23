@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Agrega">
-
+    tools:context=".nose">
     <Button
         android:id="@+id/queso"
         android:layout_width="151dp"
@@ -14,7 +13,7 @@
         android:background="@drawable/button_radius"
         android:backgroundTint="#22577A"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Enviar"
+        android:text="Desconectar"
         android:textColor="@color/White"
         android:textColorHighlight="#22577A"
         android:textColorLink="#22577A"
@@ -48,7 +47,7 @@
         android:id="@+id/imageView7"
         android:layout_width="485dp"
         android:layout_height="780dp"
-        android:layout_marginBottom="324dp"
+        android:layout_marginBottom="340dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,14 +96,12 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="306dp"
-        android:layout_height="423dp"
+        android:layout_width="379dp"
+        android:layout_height="678dp"
+        android:layout_marginBottom="168dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204"
         app:srcCompat="@drawable/cdr" />
 
     <ImageView
@@ -155,109 +152,14 @@
         app:layout_constraintVertical_bias="0.972"
         app:srcCompat="@drawable/mas" />
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="445dp"
-        android:layout_height="487dp"
-        android:layout_marginTop="244dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ListaContactos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cdr" />
-
-    <EditText
-        android:id="@+id/nombre"
-        android:layout_width="290dp"
-        android:layout_height="37dp"
-        android:background="@drawable/edit_roudw"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Nombre"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.573" />
-
-    <EditText
-        android:id="@+id/enfermeda"
-        android:layout_width="290dp"
-        android:layout_height="37dp"
-        android:background="@drawable/edit_roudw"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Enfermedad Cronica"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.626" />
-
-    <EditText
-        android:id="@+id/peso"
-        android:layout_width="142dp"
-        android:layout_height="44dp"
-        android:background="@drawable/edit_roudw"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Peso"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.69" />
-
-    <EditText
-        android:id="@+id/temperatura"
-        android:layout_width="142dp"
-        android:layout_height="44dp"
-        android:background="@drawable/edit_roudw"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Temp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754" />
-
-    <EditText
-        android:id="@+id/altura"
-        android:layout_width="142dp"
-        android:layout_height="44dp"
-        android:background="@drawable/edit_roudw"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Altura"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691" />
-
-    <EditText
-        android:id="@+id/presion"
-        android:layout_width="142dp"
-        android:layout_height="44dp"
-        android:background="@drawable/edit_roudw"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Presion"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 </androidx.constraintlayout.widget.ConstraintLayout>

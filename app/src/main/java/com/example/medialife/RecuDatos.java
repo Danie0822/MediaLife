@@ -43,7 +43,7 @@ public class RecuDatos extends AppCompatActivity {
 
                 // Establece la conexión con SQL Server
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-                String url = "jdbc:sqlserver://10.20.0.120:60732;databaseName=MediaLife;user=Alessandro;password=Gemelas2905";
+                String url = "jdbc:sqlserver://10.26.127.53:60732;databaseName=MediaLife;user=Alessandro;password=Gemelas2905";
                 Connection conn = DriverManager.getConnection(url);
 
                 // Realiza una consulta a la base de datos

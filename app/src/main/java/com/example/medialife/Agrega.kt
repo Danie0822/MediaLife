@@ -2,6 +2,7 @@ package com.example.medialife
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
@@ -18,6 +19,7 @@ lateinit var Temp: EditText
 lateinit var presion: EditText
 
 lateinit var mandar: Button
+lateinit var historial: Button
 
 class Agrega : AppCompatActivity() {
     var clickedItem: String = ""
@@ -34,6 +36,12 @@ class Agrega : AppCompatActivity() {
         Temp = findViewById(R.id.temperatura)
         presion = findViewById(R.id.presion)
         mandar = findViewById(R.id.queso)
+        historial = findViewById(R.id.historial)
+
+        historial.setOnClickListener{
+            val intent12: Intent = Intent(this, nose::class.java)
+            startActivity(intent12);
+        }
 
         mandar.setOnClickListener {
 
